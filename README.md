@@ -1,8 +1,8 @@
 ### HomeCarePro: Your One-Stop Home Services Platform
 
-HomeCarePro has solved the chronic problem of integrating into a single but amicable interface the mutually exclusive home service platforms.
+HomeCarePro has solved the chronic problem of integrating a single but simple interface for the all the different home service platforms.
 
-HomeTriangle aims to provide homeowners a simple and comprehensive way to get any kind of home service they want, be it cleaning, maintenance, shifting, or security work—all without the stress of clicking through various service providers.
+It aims to provide homeowners a simple and comprehensive way to get any kind of home service they want, be it cleaning, maintenance, shifting, or security work—all without the stress of clicking through various service providers.
 
 **Key Impact: HomeCarePro** huge savings to time and energy often spent on managing schedules, due diligence on service providers, and it mitigates risks to security breaches, and frustration over the hidden fees and service quality assessments that are non-transparent.
 
