@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Admin\\source\\repos\\HomeCarePro\\HomeCarePro.csproj": {}
+    "C:\\Users\\Admin\\source\\projects\\HomeCarePro\\HomeCarePro.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Admin\\source\\repos\\HomeCarePro\\HomeCarePro.csproj": {
+    "C:\\Users\\Admin\\source\\projects\\HomeCarePro\\HomeCarePro.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\source\\repos\\HomeCarePro\\HomeCarePro.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\source\\projects\\HomeCarePro\\HomeCarePro.csproj",
         "projectName": "HomeCarePro",
-        "projectPath": "C:\\Users\\Admin\\source\\repos\\HomeCarePro\\HomeCarePro.csproj",
+        "projectPath": "C:\\Users\\Admin\\source\\projects\\HomeCarePro\\HomeCarePro.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\source\\repos\\HomeCarePro\\obj\\",
+        "outputPath": "C:\\Users\\Admin\\source\\projects\\HomeCarePro\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

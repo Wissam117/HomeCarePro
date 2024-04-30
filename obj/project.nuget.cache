@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "V+tCEIKmbTKJPtymbl7YW+lyDJmXN6Q91UvHiwKNfoXJ3VPMkA0KCOK4xUUBv3spN6WqtQpx1s/2nvCxAbR7XQ==",
+  "dgSpecHash": "iRrzWnH3Jm4tWNKknaNvJW9cwNFVu09i3U1Tpih/C7M/ur+A1iZIau1zGVrAxwb2Z97y8iKRqRjlEEo5FhpCfw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Admin\\source\\repos\\HomeCarePro\\HomeCarePro.csproj",
+  "projectFilePath": "C:\\Users\\Admin\\source\\projects\\HomeCarePro\\HomeCarePro.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Admin\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
