@@ -1,96 +1,99 @@
-require("dotenv").config();
-const express = require("express");
+const express = require('express');
+const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
+const bcrypt = require('bcryptjs'); // For password hashing
+const dotenv = require('dotenv'); // For environment variables (optional)
+const cors = require('cors');
+
+dotenv.config(); // Load environment variables
+
 const app = express();
-const path = require("path");
-const cors = require("cors");
-const bodyParser = require("body-parser");
-const corsOptions = require("./config/corsOptions");
-const { logger } = require("./middleware/logEvents");
-const errorHandler = require("./middleware/errorHandler");
-const verifyJWT = require("./middleware/verifyJWT");
-const cookieParser = require("cookie-parser");
-const credentials = require("./middleware/credentials");
-const client = require("./config/dbConn");
-const PORT = process.env.PORT || 3500;
+const port = process.env.PORT || 5000; // Use environment variable for port or default to 5000
 
-// custom middleware logger
-app.use(logger);
 
-// Handle options credentials check - before CORS!
-// and fetch cookies credentials requirement
-app.use(credentials);
+app.use(cors());
+// Connect to MongoDB
+mongoose.connect(process.env.MONGODB_URI, {
+//   useNewUrlParser: true,
+  useUnifiedTopology: true,
+  
+})
+.then(() => console.log('MongoDB connected'))
+.catch(err => console.error('MongoDB connection error:', err));
 
-// Cross Origin Resource Sharing
-app.use(cors(corsOptions));
+// Define the User schema
+const userSchema = new mongoose.Schema({
+  userName: { type: String, required: true, unique: true },
+  email: { type: String, required: true, unique: true },
+  phoneNumber: { type: String },
+  userType: { type: String, required: true },
+  password: { type: String, required: true },
+});
 
-// parse requests of content-type - application/json
+// Hash password before saving a user
+userSchema.pre('save', async function (next) {
+  const salt = await bcrypt.genSalt(10);
+  this.password = await bcrypt.hash(this.password, salt);
+  next();
+});
+
+const User = mongoose.model('User', userSchema);
+
+// Body parser middleware for handling form data
 app.use(bodyParser.json());
 
-// built-in middleware to handle urlencoded form data
-app.use(express.urlencoded({ extended: false }));
+// Signup route
+app.post('/signup', async (req, res) => {
+  try {
+    const { userName, email, phoneNumber, userType, password } = req.body;
 
-// built-in middleware for json
-app.use(express.json());
+    // Check for existing user with email or username
+    const existingUser = await User.findOne({ $or: [{ email }, { userName }] });
+    if (existingUser) {
+      return res.status(400).json({ message: 'User already exists!' });
+    }
 
-//middleware for cookies
-app.use(cookieParser());
+    // Create a new user
+    const newUser = new User({ userName, email, phoneNumber, userType, password });
 
-//serve static files
-app.use("/", express.static(path.join(__dirname, "/public")));
+    // Save the user to the database
+    await newUser.save();
 
-// routes
-app.use("/", require("./routes/root"));
-app.use("/auth", require("./routes/auth"));
-app.use("/logout", require("./routes/logout"));
-app.use("/trackbinfo", require("./routes/xpi/track"));
-app.use("/refresh", require("./routes/refresh"));
-
-app.use(verifyJWT);
-app.use("/register", require("./routes/register"));
-app.use("/employees", require("./routes/api/employees"));
-app.use("/stations", require("./routes/api/station"));
-app.use("/billtys", require("./routes/api/billty"));
-app.use("/items", require("./routes/api/item"));
-app.use("/challans", require("./routes/api/challan"));
-app.use("/challanbillties", require("./routes/api/challanbillties"));
-app.use("/receivings", require("./routes/api/receiving"));
-app.use("/receivingbillties", require("./routes/api/receivingbillties"));
-app.use("/claims", require("./routes/api/claim"));
-app.use("/expenses", require("./routes/api/expense"));
-app.use("/billtydetails", require("./routes/api/billtydetail"));
-app.use("/challandetails", require("./routes/api/challandetail"));
-app.use("/deliverys", require("./routes/api/delivery"));
-app.use("/dashboardinfo", require("./routes/api/dashboarddata"));
-app.use("/billtypayinfo", require("./routes/api/billtypayment"));
-app.use("/receivingdetails", require("./routes/api/receivingdetails"));
-app.use("/menustations", require("./routes/api/menustation"));
-app.use("/customers", require("./routes/api/customer"));
-app.use("/customerdetails", require("./routes/api/customerdetail"));
-
-// app.use("/logout", require("./routes/logout"));
-
-// app.use("/register", require("./routes/register"));
-
-app.all("*", (req, res) => {
-  res.status(404);
-  if (req.accepts("html")) {
-    res.sendFile(path.join(__dirname, "views", "404.html"));
-  } else if (req.accepts("json")) {
-    res.json({ error: "404 Not Found" });
-  } else {
-    res.type("txt").send("404 Not Found");
+    res.status(201).json({ message: 'User created successfully!' });
+  } catch (err) {
+    console.error('Signup error:', err);
+    res.status(500).json({ message: 'Server error during signup' });
   }
 });
 
-app.use(errorHandler);
+app.post('/signin', async (req, res) => {
+    try {
+      const { email, password } = req.body;
+  
+      // Validate email and password
+      if (!email || !password) {
+        return res.status(400).json({ message: 'Please provide email and password' });
+      }
+  
+      // Find user by email
+      const user = await User.findOne({ email });
+      if (!user) {
+        return res.status(401).json({ message: 'Invalid email or password' });
+      }
+  
+      // Compare hashed passwords (using bcrypt)
+      const isMatch = await bcrypt.compare(password, user.password);
+      if (!isMatch) {
+        return res.status(401).json({ message: 'Invalid email or password' });
+      }
+  
+      // Login successful (implement session management or JWT token generation here)
+      res.status(200).json({ message: 'Login successful!' }); // Or send user data with a JWT
+  
+    } catch (err) {
+      console.error('Signin error:', err);
+      res.status(500).json({ message: 'Server error during signin' });
+    }
+  });
 
-client.connect((err) => {
-  //Connected Database
-
-  if (err) {
-    console.log(err);
-  } else {
-    console.log("Connected to pg database Successfully ");
-    app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
-  }
-});
+app.listen(port, () => console.log(`Server listening on port ${port}`));
