@@ -1,0 +1,122 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Admin\\source\\projects\\HomeCarePro\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C330593F-70A3-4D64-838E-E75434D2C9D1}|HomeCarePro.csproj|C:\\Users\\Admin\\source\\projects\\HomeCarePro\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C330593F-70A3-4D64-838E-E75434D2C9D1}|HomeCarePro.csproj|solutionrelative:views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C330593F-70A3-4D64-838E-E75434D2C9D1}|HomeCarePro.csproj|c:\\users\\admin\\source\\projects\\homecarepro\\views\\account\\signup.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C330593F-70A3-4D64-838E-E75434D2C9D1}|HomeCarePro.csproj|solutionrelative:views\\account\\signup.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C330593F-70A3-4D64-838E-E75434D2C9D1}|HomeCarePro.csproj|C:\\Users\\Admin\\source\\projects\\HomeCarePro\\models\\account\\users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C330593F-70A3-4D64-838E-E75434D2C9D1}|HomeCarePro.csproj|solutionrelative:models\\account\\users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C330593F-70A3-4D64-838E-E75434D2C9D1}|HomeCarePro.csproj|C:\\Users\\Admin\\source\\projects\\HomeCarePro\\models\\viewmodel\\loginsignupviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C330593F-70A3-4D64-838E-E75434D2C9D1}|HomeCarePro.csproj|solutionrelative:models\\viewmodel\\loginsignupviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C330593F-70A3-4D64-838E-E75434D2C9D1}|HomeCarePro.csproj|C:\\Users\\Admin\\source\\projects\\HomeCarePro\\controllers\\account\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C330593F-70A3-4D64-838E-E75434D2C9D1}|HomeCarePro.csproj|solutionrelative:controllers\\account\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C330593F-70A3-4D64-838E-E75434D2C9D1}|HomeCarePro.csproj|C:\\Users\\Admin\\source\\projects\\HomeCarePro\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C330593F-70A3-4D64-838E-E75434D2C9D1}|HomeCarePro.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 269,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "login.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\projects\\HomeCarePro\\Views\\Account\\login.cshtml",
+              "RelativeDocumentMoniker": "Views\\Account\\login.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\source\\projects\\HomeCarePro\\Views\\Account\\login.cshtml",
+              "RelativeToolTip": "Views\\Account\\login.cshtml",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAAwCAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-29T18:23:21.864Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "LoginSignUpViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\projects\\HomeCarePro\\Models\\ViewModel\\LoginSignUpViewModel.cs",
+              "RelativeDocumentMoniker": "Models\\ViewModel\\LoginSignUpViewModel.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\projects\\HomeCarePro\\Models\\ViewModel\\LoginSignUpViewModel.cs",
+              "RelativeToolTip": "Models\\ViewModel\\LoginSignUpViewModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-29T14:53:21.011Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "signup.cshtml",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\projects\\HomeCarePro\\Views\\Account\\signup.cshtml",
+              "RelativeDocumentMoniker": "Views\\Account\\signup.cshtml",
+              "ToolTip": "C:\\Users\\Admin\\source\\projects\\HomeCarePro\\Views\\Account\\signup.cshtml",
+              "RelativeToolTip": "Views\\Account\\signup.cshtml",
+              "ViewState": "AQIAAAgAAAAAAAAAAADwvx8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-29T14:51:10.064Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "users.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\projects\\HomeCarePro\\Models\\Account\\users.cs",
+              "RelativeDocumentMoniker": "Models\\Account\\users.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\projects\\HomeCarePro\\Models\\Account\\users.cs",
+              "RelativeToolTip": "Models\\Account\\users.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAQwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-29T14:40:05.411Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\projects\\HomeCarePro\\Controllers\\Account\\AccountController.cs",
+              "RelativeDocumentMoniker": "Controllers\\Account\\AccountController.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\projects\\HomeCarePro\\Controllers\\Account\\AccountController.cs",
+              "RelativeToolTip": "Controllers\\Account\\AccountController.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAAAAkAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-27T21:13:40.303Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\source\\projects\\HomeCarePro\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\Admin\\source\\projects\\HomeCarePro\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-26T13:47:05.87Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
