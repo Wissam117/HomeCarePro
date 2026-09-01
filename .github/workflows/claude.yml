@@ -9,10 +9,27 @@ on:
   pull_request_review:
     types: [submitted]
 
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+  actions: write
+  checks: write
+  statuses: write
+  id-token: write
+
 jobs:
   claude:
     if: contains(github.event.comment.body, '@claude') || contains(github.event.issue.body, '@claude')
     uses: Wissam117/gh-claude/.github/workflows/claude-reusable.yml@main
+    permissions:
+      contents: write
+      pull-requests: write
+      issues: write
+      actions: write
+      checks: write
+      statuses: write
+      id-token: write
     secrets:
       CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
       GH_PROJECT_TOKEN: ${{ secrets.GH_PROJECT_TOKEN }}
